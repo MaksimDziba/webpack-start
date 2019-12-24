@@ -1,0 +1,11 @@
+//- src/views/components/header.pug
+
+header.header
+    .header__row
+      nav.header__menu.menu
+        .menu__icon.icon-menu
+          span
+          span
+          span
+        .menu__body
+          +ul-list('menu__list','menu__list-item', ['Главная', 'Контакты', 'Проекты', 'Услуги', 'Партнеры'])

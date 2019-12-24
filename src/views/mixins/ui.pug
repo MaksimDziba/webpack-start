@@ -1,0 +1,6 @@
+//- src/views/mixins/list.pug
+
+mixin ul-list(parentClass, itemClass, items)
+  ul(class=parentClass)
+    each item in items
+      li(class=itemClass)= item

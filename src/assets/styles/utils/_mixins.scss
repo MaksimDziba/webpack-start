@@ -1,0 +1,68 @@
+/* src/assets/styles/utils/_mixins.scss  */
+
+@mixin isFlex($align: center, $justify: center, $direction: row, $wrap: wrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin bgImage($url, $repeat: no-repeat, $position: center, $size: initial) {
+  $img: "../images/";
+  background-image: url($img + $url);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin content($image,$width,$height) {
+  content: '';
+  position: absolute;
+  display: block;
+  width: $width;
+  height: $height;
+  background-image: url($image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin llpc {
+  @media (max-width: ($llpc)) {
+    @content;
+  }
+}
+@mixin lpc {
+  @media (max-width: ($lpc)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin spc {
+  @media (max-width: ($spc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin ssp {
+  @media (max-width: ($ssp)) {
+    @content;
+  }
+}

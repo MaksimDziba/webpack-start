@@ -1,0 +1,21 @@
+extends ./layouts/master.pug
+
+block title
+  title My Page - Home
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+  //- Desktop page
+  div.wrapper
+    main.home__page
+      .main-screen
+        .main-screen__bg.ibg
+          img(src="/assets/images/home/main-page-image.png" alt="soyztechnocom")
+      .content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, eveniet.
+
+      
+    
